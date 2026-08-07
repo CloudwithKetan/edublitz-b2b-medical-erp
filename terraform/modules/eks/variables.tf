@@ -4,7 +4,7 @@ variable "cluster_name" {
 
 variable "kubernetes_version" {
   type    = string
-  default = "1.32"
+  default = "1.36"
 }
 
 variable "vpc_id" {
@@ -21,7 +21,7 @@ variable "private_subnet_ids" {
 
 variable "node_instance_types" {
   type    = list(string)
-  default = ["c7i-flex.large"]
+  default = ["c7i.large"]
 }
 
 variable "capacity_type" {
