@@ -1,5 +1,5 @@
 # ─── Stage 1: Build ───────────────────────────────────────────────────────────
-FROM eclipse-temurin:17-jdk-alpine AS builder
+FROM maven:3.9.11-eclipse-temurin-17 AS builder
 
 WORKDIR /app
 
