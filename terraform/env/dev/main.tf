@@ -18,7 +18,7 @@ terraform {
 
   # Remote state — use S3 backend
   backend "s3" {
-    bucket         = "med-erp-terraform-state-dev"
+    bucket         = "med-pharm"
     key            = "dev/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
@@ -64,7 +64,7 @@ module "eks" {
   vpc_id                = module.vpc.vpc_id
   vpc_cidr              = module.vpc.vpc_cidr
   private_subnet_ids    = module.vpc.private_subnet_ids
-  node_instance_types   = ["t3.medium"]
+  node_instance_types   = ["c7i-flex.large"]
   capacity_type         = "SPOT"       # Use Spot for dev cost savings
   node_desired_count    = 2
   node_min_count        = 1
