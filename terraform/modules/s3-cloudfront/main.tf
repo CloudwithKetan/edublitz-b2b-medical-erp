@@ -1,10 +1,10 @@
 ################################################################################
 # S3 + CloudFront — Static frontend hosting with CDN
 ################################################################################
-
+data "aws_caller_identity" "current" {}
 # ── S3 Bucket ─────────────────────────────────────────────────────────────────
 resource "aws_s3_bucket" "frontend" {
-  bucket = "${var.project}-frontend-${var.environment}"
+  bucket = "${var.project}-frontend-${var.environment}-${data.aws_caller_identity.current.account_id}"
   tags   = merge(var.tags, { Name = "${var.project}-frontend" })
 }
 
