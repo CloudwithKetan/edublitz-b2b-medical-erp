@@ -38,7 +38,7 @@ pipeline {
                     dir("terraform/env/${params.ENVIRONMENT}") {
                         sh """
                             set -e
-                            terraform init -backend-config="bucket=med-erp-terraform-state-${params.ENVIRONMENT}" -reconfigure
+                            terraform init -backend-config="bucket=med-pharm-${params.ENVIRONMENT}" -reconfigure
                             terraform validate
                             terraform plan -var-file=terraform.tfvars -out=tfplan
                         """
