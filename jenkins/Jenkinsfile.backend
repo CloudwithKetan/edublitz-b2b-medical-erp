@@ -14,7 +14,7 @@ pipeline {
         IMAGE_TAG     = "${env.GIT_COMMIT ? env.GIT_COMMIT.take(8) : "b${env.BUILD_NUMBER}"}"
     }
     tools {
-        jdk 'jdk-21'
+        jdk 'jdk21'
         maven 'maven-3.9'
     }
 
