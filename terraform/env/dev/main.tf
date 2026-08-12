@@ -96,7 +96,7 @@ module "dns" {
   source                 = "../../modules/route53"
   domain_name            = var.domain_name
   frontend_subdomain     = "dev.med-erp"
-  api_subdomain          = "dev.api.med-erp"
+  api_subdomain          = "api.med-erp"
   cloudfront_domain_name = module.frontend.cloudfront_domain_name
   alb_dns_name           = var.alb_dns_name   # Set after ALB Ingress Controller deploys
   tags                   = local.common_tags
