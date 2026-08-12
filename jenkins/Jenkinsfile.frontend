@@ -9,7 +9,7 @@ pipeline {
     environment {
         AWS_REGION     = "${env.AWS_REGION ?: 'us-east-1'}"
         S3_BUCKET_NAME = "${env.S3_BUCKET_NAME ?: 'med-erp-frontend-prod'}"
-        DOMAIN_NAME    = "${env.DOMAIN_NAME ?: 'example.com'}"
+        DOMAIN_NAME    = "${env.DOMAIN_NAME ?: 'sahilubhe.online'}"
     }
 
     options {
