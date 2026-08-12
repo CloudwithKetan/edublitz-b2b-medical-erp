@@ -30,7 +30,7 @@ metadata:
     # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:...
 
     # Security groups
-    alb.ingress.kubernetes.io/security-groups: 	sg-059533df46b581fe4
+    alb.ingress.kubernetes.io/security-groups: 	sg-0065aa1ee92c2cb58
 
     # Tags
     alb.ingress.kubernetes.io/tags: "Environment=production,Project=med-erp"
