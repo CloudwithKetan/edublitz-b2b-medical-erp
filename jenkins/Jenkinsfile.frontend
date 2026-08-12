@@ -39,7 +39,7 @@ pipeline {
         }
 
         stage('S3 & CloudFront') {
-            when { branch 'main' }
+            when { branch 'project-b22' }
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
